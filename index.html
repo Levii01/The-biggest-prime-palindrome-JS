@@ -7,38 +7,17 @@
 	<title>temat</title>
 	<meta name="description" content="opis" />
 	<meta name="keywords" content=""/>
-
+  <script src="palindrome.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
-<body>
+<body onload="showResult()">
 
 	<p>Write a program which determines the largest prime palindrome less than 10000.<br>
 		 Print to stdout the largest prime palindrome less than 10000.</p>
 	<p> My program: </p>
 
 	<div id="number"> </div>
-
-	<script>
-var number = 0;
-function checkPalindrom(str) {
-  return str == str.split('').reverse().join('');
-}
-function isPrime(number) {
-  var start = 2;
-  while (start <= Math.sqrt(number)) {
-    if (number % start++ < 1) return false;
-	}
-  return number > 1;
-}
-
-var i = 10000;
-while (!(isPrime(i) && checkPalindrom(i.toString()))) {
-  i--;
-	number = i;
-}
-document.getElementById("number").innerHTML = "Hello this number is : " + number;
-	</script>
 </body>
 
 </html>
